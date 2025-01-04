@@ -4,4 +4,5 @@ A lib for easier use of raylib in c++
 
 ### How to install
 
-First, download [raylib](https://www.raylib.com/)
+1. [Download raylib](https://www.raylib.com/)
+2. 
