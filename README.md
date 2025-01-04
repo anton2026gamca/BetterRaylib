@@ -1,6 +1,6 @@
 # BetterRaylib
 
-A lib for easier use of raylib
+A lib for easier use of raylib in c++
 
 ### How to install
 
