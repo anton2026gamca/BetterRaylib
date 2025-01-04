@@ -2,8 +2,6 @@
 
 A lib for easier use of raylib in c++
 
-Run the Projects/Example/example.exe to try the example game
-=======
 To run the example game made with this library, download the [demo.zip](https://github.com/anton2026gamca/BetterRaylib/raw/refs/heads/main/demo.zip), extract it somewhere and run the golf.exe
 
 ### How to install
