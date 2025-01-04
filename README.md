@@ -2,7 +2,7 @@
 
 A lib for easier use of raylib in c++
 
-Run the Projects/golf/golf.exe to try the example game
+To run the example game made with this library, download the [demo.zip](), extract it somewhere and run the golf.exe
 
 ### How to install
 
