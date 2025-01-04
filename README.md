@@ -2,6 +2,8 @@
 
 A lib for easier use of raylib in c++
 
+Run the Projects/Exmaple/exmaple.exe to try a sample game
+
 ### How to install
 
 1. [Download raylib](https://www.raylib.com/)
