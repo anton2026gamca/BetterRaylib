@@ -11,3 +11,5 @@ To run the example game made with this library, download the [demo.zip](https://
 3. Extract it all to a location you like
 4. Go to Projects/Template and double-click the main.code-workspace to open in vs-code
 5. Press F5 to compile and run
+
+Dont forget to check out the examples!

@@ -17,8 +17,8 @@ bool CheckCollisionRecs(Rectangle rect1, Vector2 rect1pivot, float rect1rotation
     {
         Rectangle new_rect1 = {rect1_x, rect1_y, rect1.width, rect1.height};
         Rectangle new_rect2 = {rect2_x, rect2_y, rect2.width, rect2.height};
-        //DrawRectangleLinesEx(new_rect1, 2, RED);
-        //DrawRectangleLinesEx(new_rect2, 2, RED);
+        DrawRectangleLinesEx(new_rect1, 2, RED);
+        DrawRectangleLinesEx(new_rect2, 2, RED);
         return CheckCollisionRecs(new_rect1, new_rect2);
     }
 
@@ -51,7 +51,7 @@ bool CheckCollisionRecs(Rectangle rect1, Vector2 rect1pivot, float rect1rotation
     otherRectPoints[3] = rBottomLeft;
     otherRectPoints[4] = rTopLeft;
 
-    //DrawLine(otherRectPoints[0].x, otherRectPoints[0].y, otherRectPoints[1].x, otherRectPoints[1].y, RED);
+    ///DrawLine(otherRectPoints[0].x, otherRectPoints[0].y, otherRectPoints[1].x, otherRectPoints[1].y, RED);
     //DrawLine(otherRectPoints[1].x, otherRectPoints[1].y, otherRectPoints[2].x, otherRectPoints[2].y, RED);
     //DrawLine(otherRectPoints[2].x, otherRectPoints[2].y, otherRectPoints[3].x, otherRectPoints[3].y, RED);
     //DrawLine(otherRectPoints[3].x, otherRectPoints[3].y, otherRectPoints[4].x, otherRectPoints[4].y, RED);
@@ -65,9 +65,7 @@ bool CheckCollisionRecs(Rectangle rect1, Vector2 rect1pivot, float rect1rotation
             if (CheckCollisionPointPoly((Vector2){rect1_x + (float)x, rect1_y + (float)y}, otherRectPoints, 5))
             {
                 //Vector2 point = (Vector2){rect1_x + x, rect1_y + y};
-                //Vector2 rPoint = RotatePoint(point, {rect1.x, rect1.y}, rect1rotation);
                 //DrawRectangle(point.x, point.y, 1, 1, RED);
-                //DrawRectangle(rPoint.x, rPoint.y, 1, 1, BLUE);
 
                 return true;
             }

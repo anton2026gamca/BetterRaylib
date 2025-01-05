@@ -222,7 +222,7 @@ bool Sprite::GetCollision(Sprite* otherSprite)
     Rectangle rect1 = GetBackgroundRect();
     Rectangle rect2 = otherSprite->GetBackgroundRect();
 
-    return CheckCollisionRecs(rect1, position, rotation, rect2, otherSprite->position, otherSprite->rotation);
+    return CheckCollisionRecs(rect1, {pivot.x * rect1.width, pivot.y * rect1.height}, rotation, rect2, {otherSprite->pivot.x * rect2.width, otherSprite->pivot.y * rect2.height}, otherSprite->rotation);
     /*
     if (!CheckCollisionRecs(GetOuterRect(), otherSprite->GetOuterRect()))
         return false;
@@ -525,10 +525,28 @@ void Sprite::SetAnimation(int frameWidth, int frameHeight, int startFrame, int f
 /// @brief Displays next frame of the animation
 void Sprite::NextFrame()
 {
+    if (!isAnimationSet)
+        return;
+
     animationCurrentFrame++;
     if (animationCurrentFrame >= animationFramesCount)
         animationCurrentFrame = 0;
 
     int numFramesFitX = texture.width / animationFrameWidth;
     sourceRect = Rectangle{(float)((animationStartFrame + animationCurrentFrame) % numFramesFitX) * animationFrameWidth, (float)((animationStartFrame + animationCurrentFrame) / numFramesFitX) * animationFrameHeight, (float)animationFrameWidth, (float)animationFrameHeight};
+}
+
+void Sprite::AnimationUpdate(float fps)
+{
+    if (!isAnimationSet)
+        return;
+
+    timeFromLastUpdate += GetFrameTime();
+    const float targetTime = 1 / fps;
+
+    if (timeFromLastUpdate > targetTime)
+    {
+        NextFrame();
+        timeFromLastUpdate -= targetTime;
+    }
 }

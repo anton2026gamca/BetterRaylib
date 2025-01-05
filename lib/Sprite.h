@@ -61,6 +61,7 @@ class Sprite
         void SetAnimation(int frameWidth, int frameHeight); // Cuts Sprite into frames (Animation will start on the 1st frame and end on the last)
         void SetAnimation(int frameWidth, int frameHeight, int startFrame, int frameCount); // Cuts Sprite into frames
         void NextFrame();                           // Displays the next frame of the animation
+        void AnimationUpdate(float fps);            // Updates the animation
 
         Texture texture = {0};                      // Sprite Texture
         Image image = {0};                          // Sprite Image
@@ -80,6 +81,7 @@ class Sprite
         int animationStartFrame;                    // The first frame of the animation
         int animationFramesCount;                   // Max Animation frames
         int animationCurrentFrame;                  // Current Animation frame
+        float timeFromLastUpdate;                   // The time elapsed from the last animation update
 
 };
 
