@@ -1,7 +1,7 @@
 #include <raylib.h>
-#include "Sprite.h"
-#include "Helpers.h"
 #include <iostream>
+#define BETTER_RAYLIB_IMPLEMENTATION
+#include "better_raylib.h"
 
 using namespace std;
 

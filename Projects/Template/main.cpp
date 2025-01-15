@@ -1,7 +1,6 @@
 #include <raylib.h>
-#include "Sprite.h"
-#include "Shapes.h"
-#include "Helpers.h"
+#define BETTER_RAYLIB_IMPLEMENTATION
+#include "better_raylib.h"
 
 // Define screen width and height
 #define SCREEN_WIDTH 1280
